@@ -18,6 +18,14 @@ Route::get('/', function () {
 });
 
 Route::get(
-    '/home',
-    'App\Http\Controllers\HomeController@home'
-)->name('home');
+    '/list',
+    [App\Http\Controllers\HomeController::class, 'list']
+)->name('list');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
