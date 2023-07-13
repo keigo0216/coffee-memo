@@ -10,13 +10,22 @@ class DatabaseSeeder extends Seeder
     /**
      * Seed the application's database.
      */
+
+    // 実行したいシーダークラスを登録する
+    private const SEEDERS = [
+        UserSeeder::class,
+        BrewingMethodSeeder::class,
+        CountrySeeder::class,
+        WayToDrinkSeeder::class,
+        CoffeeSeeder::class
+    ];
+
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        // 登録したシーダークラスを順番に実行する
+        foreach (self::SEEDERS as $seeder) {
+            $this->call($seeder);
+        }
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
     }
 }
