@@ -32,6 +32,7 @@ return new class extends Migration
            $table->integer('aftercooled_level');
            $table->string('note');
            $table->string('img');
+           $table->string('date');
        });
     }
 

@@ -19,6 +19,28 @@ class CoffeeSeeder extends Seeder
                 'id' => '1',
                 'user_id' => '1',
                 'brewing_method_id' => '1',
+                'country_id' => '3',
+                'way_to_drink_id' => '1',
+                'name' => 'スマトラマンデリン',
+                'evaluation' => '4',
+                'shop' => 'びぎん',
+                'roast_level' => '7',
+                'scent_level' => '3',
+                'bitterness_level' => '4',
+                'acidity_level' => '1',
+                'sweetness_level' => '2',
+                'clearness_level' => '5',
+                'rich_level' => '5',
+                'aftertaste_level' => '5',
+                'aftercooled_level' => '5',
+                'note' => 'コーヒー飲みしか売っていないお店で、コーヒーの味わいに集中することができた。',
+                'img' => 'storage/sample/IMG_2490.jpg',
+                'date' => '2021/06/10'
+            ],
+            [
+                'id' => '2',
+                'user_id' => '1',
+                'brewing_method_id' => '1',
                 'country_id' => '12',
                 'way_to_drink_id' => '1',
                 'name' => 'ニカラグア',
@@ -36,28 +58,8 @@ class CoffeeSeeder extends Seeder
                 'note' => 'ニカラグアのコーヒーは、甘みが強く、酸味が少ないのが特徴。
                 同時に出てきた、あんみつも美味し買った。
                 店内の雰囲気はコーヒーのバーみたいな感じで、落ち着いていて良かった。',
-                'img' => 'storage/sample/IMG_2492.jpg'
-            ],
-            [
-                'id' => '2',
-                'user_id' => '1',
-                'brewing_method_id' => '1',
-                'country_id' => '3',
-                'way_to_drink_id' => '1',
-                'name' => 'スマトラマンデリン',
-                'evaluation' => '4',
-                'shop' => 'びぎん',
-                'roast_level' => '7',
-                'scent_level' => '3',
-                'bitterness_level' => '4',
-                'acidity_level' => '1',
-                'sweetness_level' => '2',
-                'clearness_level' => '5',
-                'rich_level' => '5',
-                'aftertaste_level' => '5',
-                'aftercooled_level' => '5',
-                'note' => 'コーヒー飲みしか売っていないお店で、コーヒーの味わいに集中することができた。',
-                'img' => 'storage/sample/IMG_2490.jpg'
+                'img' => 'storage/sample/IMG_2492.jpg',
+                'date' => '2021/06/11'
             ]
         ];
         DB::table('coffees') -> insert($params);
