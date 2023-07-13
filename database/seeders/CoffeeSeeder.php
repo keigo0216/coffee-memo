@@ -35,7 +35,8 @@ class CoffeeSeeder extends Seeder
                 'aftercooled_level' => '5',
                 'note' => 'ニカラグアのコーヒーは、甘みが強く、酸味が少ないのが特徴。
                 同時に出てきた、あんみつも美味し買った。
-                店内の雰囲気はコーヒーのバーみたいな感じで、落ち着いていて良かった。'
+                店内の雰囲気はコーヒーのバーみたいな感じで、落ち着いていて良かった。',
+                'img' => 'storage/sample/IMG_2492.jpg'
             ],
             [
                 'id' => '2',
@@ -55,7 +56,8 @@ class CoffeeSeeder extends Seeder
                 'rich_level' => '5',
                 'aftertaste_level' => '5',
                 'aftercooled_level' => '5',
-                'note' => 'コーヒー飲みしか売っていないお店で、コーヒーの味わいに集中することができた。'
+                'note' => 'コーヒー飲みしか売っていないお店で、コーヒーの味わいに集中することができた。',
+                'img' => 'storage/sample/IMG_2490.jpg'
             ]
         ];
         DB::table('coffees') -> insert($params);
