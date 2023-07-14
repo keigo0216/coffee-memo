@@ -42,4 +42,29 @@ class HomeController extends Controller
 
         return view('list', ['coffees' => $coffees]);
     }
+
+    public function coffeeregister()
+    {
+        return view('coffeeregister');
+    }
+
+    public function coffeecreate(Request $request)
+    {
+        $coffee = new Coffee;
+
+        // 画像を保存
+        $dir = 'coffee_image';
+        $img_path = $request->file('coffee_img')->getClientOriginalName();
+        $request->file('coffee_img')->storeAs('public/' . $dir, $img_path);
+
+        $form = $request->all();
+        $form['user_id'] = Auth::id();
+        unset($form['_token']);
+        
+        // 画像のパスをDBに保存
+        $form['img'] = 'storage/' . $dir . '/' . $img_path;
+
+        $coffee->fill($form)->save();
+        return redirect('/list');
+    }
 }
