@@ -79,6 +79,10 @@ class HomeController extends Controller
     public function coffeeedit($id)
     {
         $coffee = Coffee::find($id);
-        return view('coffeeedit', ['coffee' => $coffee]);
+        // countriesテーブル、brewing_methodsテーブル、way_to_drinksテーブルのidを、それぞれのテーブルのnameに変換
+        $country = $coffee->country->name;
+        $brewing_method = $coffee->brewing_method->name;
+        $way_to_drink = $coffee->way_to_drink->name;
+        return view('coffeeedit', ['coffee' => $coffee, 'country' => $country, 'brewing_method' => $brewing_method, 'way_to_drink' => $way_to_drink]);
     }
 }

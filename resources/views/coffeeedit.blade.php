@@ -6,9 +6,9 @@
         <p>評価値:{{ $coffee->evaluation}}</p>
         <p>{{$coffee->date}}</p>
         <img src="{{ asset($coffee->img) }}" alt="coffee_image">
-        <p>抽出方法:{{ $coffee->brewing_method_id }}</p>
-        <p>国:{{ $coffee->country_id }}</p>
-        <p>飲み方:{{ $coffee->way_to_drink_id }}</p>
+        <p>抽出方法:{{ $brewing_method }}</p>
+        <p>国:{{ $country }}</p>
+        <p>飲み方:{{ $way_to_drink }}</p>
         <p>名前:{{ $coffee->name }}</p>
         <p>ロースト度合い:{{ $coffee->roast_level }}</p>
         <p>香りの強さ:{{ $coffee->scent_level }}</p>
