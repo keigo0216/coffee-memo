@@ -22,9 +22,15 @@ Route::get(
     [App\Http\Controllers\HomeController::class, 'list']
 )->name('list');
 
-Auth::routes();
+Route::get(
+    '/coffeeregister',
+    [App\Http\Controllers\HomeController::class, 'coffeeregister']
+)->name('coffeeregister');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post(
+    '/coffeeregister',
+    [App\Http\Controllers\HomeController::class, 'coffeecreate']
+)->name('coffeeregister');
 
 Auth::routes();
 
