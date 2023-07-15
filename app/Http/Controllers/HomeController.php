@@ -74,4 +74,11 @@ class HomeController extends Controller
         $coffee->fill($form)->save();
         return redirect('/list');
     }
+
+    // コーヒーの詳細画面
+    public function coffeeedit($id)
+    {
+        $coffee = Coffee::find($id);
+        return view('coffeeedit', ['coffee' => $coffee]);
+    }
 }

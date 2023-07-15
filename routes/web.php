@@ -32,6 +32,11 @@ Route::post(
     [App\Http\Controllers\HomeController::class, 'coffeecreate']
 )->name('coffeeregister');
 
+Route::get(
+    '/coffeeedit/{id}',
+    [App\Http\Controllers\HomeController::class, 'coffeeedit']
+)->name('coffeeedit');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
