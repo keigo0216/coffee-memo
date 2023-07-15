@@ -35,4 +35,19 @@ class Coffee extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function brewing_method()
+    {
+        return $this->belongsTo(BrewingMethod::class);
+    }
+
+    public function country()
+    {
+        return $this->belongsTo(Country::class);
+    }
+
+    public function way_to_drink()
+    {
+        return $this->belongsTo(WayToDrink::class);
+    }
 }
