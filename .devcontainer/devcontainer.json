@@ -12,7 +12,8 @@
 				"GitHub.copilot-labs",
 				"GitHub.copilot",
 				"ecmel.vscode-html-css",
-				"mhutchie.git-graph"
+				"mhutchie.git-graph",
+				"bradlc.vscode-tailwindcss"
 			],
 			"settings": {}
 		}
