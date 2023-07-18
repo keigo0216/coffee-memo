@@ -5,6 +5,7 @@
     "keywords": ["laravel", "framework"],
     "license": "MIT",
     "require": {
+        "barryvdh/laravel-debugbar": "^3.8",
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.2",
         "intervention/image": "^2.7",
@@ -51,6 +52,7 @@
             "@php artisan key:generate --ansi"
         ],
         "post-install-cmd": [
+            "mkdir storage/app/public/coffee_image",
             "php artisan storage:link"
         ]
     },
