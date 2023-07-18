@@ -52,9 +52,7 @@
             "@php artisan key:generate --ansi"
         ],
         "post-install-cmd": [
-            "mkdir storage/app/public/coffee_image",
-            "chmod -R 777 storage",
-            "php artisan storage:link"
+            "mkdir storage/app/public/coffee_image"
         ]
     },
     "extra": {
