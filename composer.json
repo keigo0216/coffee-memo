@@ -53,7 +53,7 @@
         ],
         "post-install-cmd": [
             "mkdir storage/app/public/coffee_image",
-            "chmod -R 777 storage/app/public/coffee_image",
+            "chmod -R 777 storage",
             "php artisan storage:link"
         ]
     },
