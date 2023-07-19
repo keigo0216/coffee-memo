@@ -27,7 +27,6 @@ class Coffee extends Model
         'aftertaste_level',
         'aftercooled_level',
         'note',
-        'img',
         'date'
     ];
 
@@ -49,5 +48,10 @@ class Coffee extends Model
     public function way_to_drink()
     {
         return $this->belongsTo(WayToDrink::class);
+    }
+
+    public function binary_image()
+    {
+        return $this->hasOne(BinaryImage::class);
     }
 }
