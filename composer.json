@@ -50,9 +50,6 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ],
-        "post-install-cmd": [
-            "mkdir storage/app/public/coffee_image"
         ]
     },
     "extra": {
