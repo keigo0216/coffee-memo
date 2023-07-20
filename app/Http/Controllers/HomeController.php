@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Coffee;
 use InterventionImage;
+use App\Models\BinaryImage;
 
 class HomeController extends Controller
 {
@@ -52,9 +53,9 @@ class HomeController extends Controller
     public function coffeecreate(Request $request)
     {
         $coffee = new Coffee;
+        $binary_image = new BinaryImage;
 
-        // 画像を保存先パス
-        $dir = 'coffee_image';
+
         // formで送られてきた画像を変数に格納
         $coffee_img = $request->file('coffee_img');
         // 画像の名前を取得
@@ -62,16 +63,18 @@ class HomeController extends Controller
         // アスペクト比を維持したまま、画像のサイズを変更
         $img = InterventionImage::make($coffee_img)->resize(300, null, function ($constraint) {
             $constraint->aspectRatio();
-        })->save(storage_path() . '/app/public/' . $dir . '/' . $img_name);
-
+        });
+        // 画像をbase64でエンコードして、coffee_idと共に保存
+        $img_base64=$img->encode('data-url');
+        
         $form = $request->all();
         $form['user_id'] = Auth::id();
         unset($form['_token']);
-        
-        // 画像のパスをDBに保存
-        $form['img'] = 'storage/' . $dir . '/' . $img_name;
-
         $coffee->fill($form)->save();
+
+        $binary_image->fill(['user_id' => Auth::id(), 'coffee_id' => $coffee->id, 'image' => $img_base64])->save();
+
+
         return redirect('/list');
     }
 

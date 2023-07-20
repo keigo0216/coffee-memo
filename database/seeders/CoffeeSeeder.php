@@ -34,7 +34,6 @@ class CoffeeSeeder extends Seeder
                 'aftertaste_level' => '5',
                 'aftercooled_level' => '5',
                 'note' => 'コーヒー飲みしか売っていないお店で、コーヒーの味わいに集中することができた。',
-                'img' => 'storage/sample/IMG_2490.jpg',
                 'date' => '2021/06/10'
             ],
             [
@@ -58,7 +57,6 @@ class CoffeeSeeder extends Seeder
                 'note' => 'ニカラグアのコーヒーは、甘みが強く、酸味が少ないのが特徴。
                 同時に出てきた、あんみつも美味し買った。
                 店内の雰囲気はコーヒーのバーみたいな感じで、落ち着いていて良かった。',
-                'img' => 'storage/sample/IMG_fajijaf.jpg',
                 'date' => '2021/06/11'
             ]
         ];
