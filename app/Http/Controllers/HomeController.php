@@ -75,7 +75,7 @@ class HomeController extends Controller
         $binary_image->fill(['user_id' => Auth::id(), 'coffee_id' => $coffee->id, 'image' => $img_base64])->save();
 
 
-        return redirect('/list');
+        return redirect('/');
     }
 
     // コーヒーの詳細画面

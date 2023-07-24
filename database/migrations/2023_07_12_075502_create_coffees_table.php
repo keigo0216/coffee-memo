@@ -33,6 +33,7 @@ return new class extends Migration
            $table->string('note')->nullable();
            $table->string('img')->nullable();
            $table->string('date')->nullable();
+           $table->string('farm')->nullable();
        });
     }
 
