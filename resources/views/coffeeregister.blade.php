@@ -172,20 +172,20 @@
                     @endphp
 
                     @for($i = 1; $i <= 5; $i++)
-                        <input type="radio" id="star{{ $i }}" name="scent_level" value="{{ $i }}" class="hidden" {{ $i <= $scent_level ? 'checked' : '' }} />
-                        <label for="star{{ $i }}"><i class="fa-solid fa-star {{$i <= $scent_level ? 'active' : ''}}"></i></label>
+                        <input type="radio" id="scent_star{{ $i }}" name="scent_level" value="{{ $i }}" class="hidden" {{ $i <= $scent_level ? 'checked' : '' }} />
+                        <label for="scent_star{{ $i }}"><i class="fa-solid fa-star {{$i <= $scent_level ? 'active' : ''}}"></i></label>
                     @endfor
                 @else
-                    <input type="radio" id="star1" name="scent_level" value="1" class="hidden"/>
-                    <label for="star1"><i class="fa-solid fa-star"></i></label>
-                    <input type="radio" id="star2" name="scent_level" value="2" class="hidden"/>
-                    <label for="star2"><i class="fa-solid fa-star" class="hidden"></i></label>
-                    <input type="radio" id="star3" name="scent_level" value="3" class="hidden"/>
-                    <label for="star3"><i class="fa-solid fa-star" ></i></label>
-                    <input type="radio" id="star4" name="scent_level" value="4" class="hidden"/>
-                    <label for="star4"><i class="fa-solid fa-star"></i></label>
-                    <input type="radio" id="star5" name="scent_level" value="5" class="hidden"/>
-                    <label for="star5"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="scent_star1" name="scent_level" value="1" class="hidden"/>
+                    <label for="scent_star1"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="scent_star2" name="scent_level" value="2" class="hidden"/>
+                    <label for="scent_star2"><i class="fa-solid fa-star" class="hidden"></i></label>
+                    <input type="radio" id="scent_star3" name="scent_level" value="3" class="hidden"/>
+                    <label for="scent_star3"><i class="fa-solid fa-star" ></i></label>
+                    <input type="radio" id="scent_star4" name="scent_level" value="4" class="hidden"/>
+                    <label for="scent_star4"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="scent_star5" name="scent_level" value="5" class="hidden"/>
+                    <label for="scent_star5"><i class="fa-solid fa-star"></i></label>
                 @endif
             </div>
         </div>
@@ -200,20 +200,20 @@
                     @endphp
 
                     @for($i = 1; $i <= 5; $i++)
-                        <input type="radio" id="star{{ $i }}" name="bitterness_level" value="{{ $i }}" class="hidden" {{ $i <= $bitterness_level ? 'checked' : '' }} />
-                        <label for="star{{ $i }}"><i class="fa-solid fa-star {{$i <= $bitterness_level ? 'active' : ''}}"></i></label>
+                        <input type="radio" id="bitterness_star{{ $i }}" name="bitterness_level" value="{{ $i }}" class="hidden" {{ $i <= $bitterness_level ? 'checked' : '' }} />
+                        <label for="bitterness_star{{ $i }}"><i class="fa-solid fa-star {{$i <= $bitterness_level ? 'active' : ''}}"></i></label>
                     @endfor
                 @else
-                    <input type="radio" id="star1" name="bitterness_level" value="1" class="hidden"/>
-                    <label for="star1"><i class="fa-solid fa-star"></i></label>
-                    <input type="radio" id="star2" name="bitterness_level" value="2" class="hidden"/>
-                    <label for="star2"><i class="fa-solid fa-star" class="hidden"></i></label>
-                    <input type="radio" id="star3" name="bitterness_level" value="3" class="hidden"/>
-                    <label for="star3"><i class="fa-solid fa-star" ></i></label>
-                    <input type="radio" id="star4" name="bitterness_level" value="4" class="hidden"/>
-                    <label for="star4"><i class="fa-solid fa-star"></i></label>
-                    <input type="radio" id="star5" name="bitterness_level" value="5" class="hidden"/>
-                    <label for="star5"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="bitterness_star1" name="bitterness_level" value="1" class="hidden"/>
+                    <label for="bitterness_star1"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="bitterness_star2" name="bitterness_level" value="2" class="hidden"/>
+                    <label for="bitterness_star2"><i class="fa-solid fa-star" class="hidden"></i></label>
+                    <input type="radio" id="bitterness_star3" name="bitterness_level" value="3" class="hidden"/>
+                    <label for="bitterness_star3"><i class="fa-solid fa-star" ></i></label>
+                    <input type="radio" id="bitterness_star4" name="bitterness_level" value="4" class="hidden"/>
+                    <label for="bitterness_star4"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="bitterness_star5" name="bitterness_level" value="5" class="hidden"/>
+                    <label for="bitterness_star5"><i class="fa-solid fa-star"></i></label>
                 @endif
             </div>
         </div>
@@ -228,20 +228,20 @@
                     @endphp
 
                     @for($i = 1; $i <= 5; $i++)
-                        <input type="radio" id="star{{ $i }}" name="acidity_level" value="{{ $i }}" class="hidden" {{ $i <= $acidity_level ? 'checked' : '' }} />
-                        <label for="star{{ $i }}"><i class="fa-solid fa-star {{$i <= $acidity_level ? 'active' : ''}}"></i></label>
+                        <input type="radio" id="acidity_star{{ $i }}" name="acidity_level" value="{{ $i }}" class="hidden" {{ $i <= $acidity_level ? 'checked' : '' }} />
+                        <label for="acidity_star{{ $i }}"><i class="fa-solid fa-star {{$i <= $acidity_level ? 'active' : ''}}"></i></label>
                     @endfor
                 @else
-                    <input type="radio" id="star1" name="acidity_level" value="1" class="hidden"/>
-                    <label for="star1"><i class="fa-solid fa-star"></i></label>
-                    <input type="radio" id="star2" name="acidity_level" value="2" class="hidden"/>
-                    <label for="star2"><i class="fa-solid fa-star" class="hidden"></i></label>
-                    <input type="radio" id="star3" name="acidity_level" value="3" class="hidden"/>
-                    <label for="star3"><i class="fa-solid fa-star" ></i></label>
-                    <input type="radio" id="star4" name="acidity_level" value="4" class="hidden"/>
-                    <label for="star4"><i class="fa-solid fa-star"></i></label>
-                    <input type="radio" id="star5" name="acidity_level" value="5" class="hidden"/>
-                    <label for="star5"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="acidity_star1" name="acidity_level" value="1" class="hidden"/>
+                    <label for="acidity_star1"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="acidity_star2" name="acidity_level" value="2" class="hidden"/>
+                    <label for="acidity_star2"><i class="fa-solid fa-star" class="hidden"></i></label>
+                    <input type="radio" id="acidity_star3" name="acidity_level" value="3" class="hidden"/>
+                    <label for="acidity_star3"><i class="fa-solid fa-star" ></i></label>
+                    <input type="radio" id="acidity_star4" name="acidity_level" value="4" class="hidden"/>
+                    <label for="acidity_star4"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="acidity_star5" name="acidity_level" value="5" class="hidden"/>
+                    <label for="acidity_star5"><i class="fa-solid fa-star"></i></label>
                 @endif
             </div>
         </div>
@@ -256,20 +256,20 @@
                     @endphp
 
                     @for($i = 1; $i <= 5; $i++)
-                        <input type="radio" id="star{{ $i }}" name="sweetness_level" value="{{ $i }}" class="hidden" {{ $i <= $sweetness_level ? 'checked' : '' }} />
-                        <label for="star{{ $i }}"><i class="fa-solid fa-star {{$i <= $sweetness_level ? 'active' : ''}}"></i></label>
+                        <input type="radio" id="sweetness_star{{ $i }}" name="sweetness_level" value="{{ $i }}" class="hidden" {{ $i <= $sweetness_level ? 'checked' : '' }} />
+                        <label for="sweetness_star{{ $i }}"><i class="fa-solid fa-star {{$i <= $sweetness_level ? 'active' : ''}}"></i></label>
                     @endfor
                 @else
-                    <input type="radio" id="star1" name="sweetness_level" value="1" class="hidden"/>
-                    <label for="star1"><i class="fa-solid fa-star"></i></label>
-                    <input type="radio" id="star2" name="seetness_level" value="2" class="hidden"/>
-                    <label for="star2"><i class="fa-solid fa-star" class="hidden"></i></label>
-                    <input type="radio" id="star3" name="acidity_level" value="3" class="hidden"/>
-                    <label for="star3"><i class="fa-solid fa-star" ></i></label>
-                    <input type="radio" id="star4" name="seetness_level" value="4" class="hidden"/>
-                    <label for="star4"><i class="fa-solid fa-star"></i></label>
-                    <input type="radio" id="star5" name="seetness_level" value="5" class="hidden"/>
-                    <label for="star5"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="sweetness_star1" name="sweetness_level" value="1" class="hidden"/>
+                    <label for="sweetness_star1"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="sweetness_star2" name="sweetness_level" value="2" class="hidden"/>
+                    <label for="sweetness_star2"><i class="fa-solid fa-star" class="hidden"></i></label>
+                    <input type="radio" id="sweetness_star3" name="sweetness_level" value="3" class="hidden"/>
+                    <label for="sweetness_star3"><i class="fa-solid fa-star" ></i></label>
+                    <input type="radio" id="sweetness_star4" name="sweetness_level" value="4" class="hidden"/>
+                    <label for="sweetness_star4"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="sweetness_star5" name="sweetness_level" value="5" class="hidden"/>
+                    <label for="sweetness_star5"><i class="fa-solid fa-star"></i></label>
                 @endif
             </div>
         </div>
@@ -284,20 +284,20 @@
                     @endphp
 
                     @for($i = 1; $i <= 5; $i++)
-                        <input type="radio" id="star{{ $i }}" name="clearness_level" value="{{ $i }}" class="hidden" {{ $i <= $clearness_level ? 'checked' : '' }} />
-                        <label for="star{{ $i }}"><i class="fa-solid fa-star {{$i <= $clearness_level ? 'active' : ''}}"></i></label>
+                        <input type="radio" id="clearness_star{{ $i }}" name="clearness_level" value="{{ $i }}" class="hidden" {{ $i <= $clearness_level ? 'checked' : '' }} />
+                        <label for="clearness_star{{ $i }}"><i class="fa-solid fa-star {{$i <= $clearness_level ? 'active' : ''}}"></i></label>
                     @endfor
                 @else
-                    <input type="radio" id="star1" name="clearness_level" value="1" class="hidden"/>
-                    <label for="star1"><i class="fa-solid fa-star"></i></label>
-                    <input type="radio" id="star2" name="clearness_level" value="2" class="hidden"/>
-                    <label for="star2"><i class="fa-solid fa-star" class="hidden"></i></label>
-                    <input type="radio" id="star3" name="clearness_level" value="3" class="hidden"/>
-                    <label for="star3"><i class="fa-solid fa-star" ></i></label>
-                    <input type="radio" id="star4" name="clearness_level" value="4" class="hidden"/>
-                    <label for="star4"><i class="fa-solid fa-star"></i></label>
-                    <input type="radio" id="star5" name="clearness_level" value="5" class="hidden"/>
-                    <label for="star5"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="clearness_star1" name="clearness_level" value="1" class="hidden"/>
+                    <label for="clearness_star1"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="clearness_star2" name="clearness_level" value="2" class="hidden"/>
+                    <label for="clearness_star2"><i class="fa-solid fa-star" class="hidden"></i></label>
+                    <input type="radio" id="clearness_star3" name="clearness_level" value="3" class="hidden"/>
+                    <label for="clearness_star3"><i class="fa-solid fa-star" ></i></label>
+                    <input type="radio" id="clearness_star4" name="clearness_level" value="4" class="hidden"/>
+                    <label for="clearness_star4"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="clearness_star5" name="clearness_level" value="5" class="hidden"/>
+                    <label for="clearness_star5"><i class="fa-solid fa-star"></i></label>
                 @endif
             </div>
         </div>
@@ -312,20 +312,20 @@
                     @endphp
 
                     @for($i = 1; $i <= 5; $i++)
-                        <input type="radio" id="star{{ $i }}" name="rich_level" value="{{ $i }}" class="hidden" {{ $i <= $rich_level ? 'checked' : '' }} />
-                        <label for="star{{ $i }}"><i class="fa-solid fa-star {{$i <= $rich_level ? 'active' : ''}}"></i></label>
+                        <input type="radio" id="rich_star{{ $i }}" name="rich_level" value="{{ $i }}" class="hidden" {{ $i <= $rich_level ? 'checked' : '' }} />
+                        <label for="rich_star{{ $i }}"><i class="fa-solid fa-star {{$i <= $rich_level ? 'active' : ''}}"></i></label>
                     @endfor
                 @else
-                    <input type="radio" id="star1" name="rich_level" value="1" class="hidden"/>
-                    <label for="star1"><i class="fa-solid fa-star"></i></label>
-                    <input type="radio" id="star2" name="rich_level" value="2" class="hidden"/>
-                    <label for="star2"><i class="fa-solid fa-star" class="hidden"></i></label>
-                    <input type="radio" id="star3" name="rich_level" value="3" class="hidden"/>
-                    <label for="star3"><i class="fa-solid fa-star" ></i></label>
-                    <input type="radio" id="star4" name="rich_level" value="4" class="hidden"/>
-                    <label for="star4"><i class="fa-solid fa-star"></i></label>
-                    <input type="radio" id="star5" name="rich_level" value="5" class="hidden"/>
-                    <label for="star5"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="rich_star1" name="rich_level" value="1" class="hidden"/>
+                    <label for="rich_star1"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="rich_star2" name="rich_level" value="2" class="hidden"/>
+                    <label for="rich_star2"><i class="fa-solid fa-star" class="hidden"></i></label>
+                    <input type="radio" id="rich_star3" name="rich_level" value="3" class="hidden"/>
+                    <label for="rich_star3"><i class="fa-solid fa-star" ></i></label>
+                    <input type="radio" id="rich_star4" name="rich_level" value="4" class="hidden"/>
+                    <label for="rich_star4"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="rich_star5" name="rich_level" value="5" class="hidden"/>
+                    <label for="rich_star5"><i class="fa-solid fa-star"></i></label>
                 @endif
             </div>
         </div>
@@ -340,20 +340,20 @@
                     @endphp
 
                     @for($i = 1; $i <= 5; $i++)
-                        <input type="radio" id="star{{ $i }}" name="aftertaste_level" value="{{ $i }}" class="hidden" {{ $i <= $aftertaste_level ? 'checked' : '' }} />
-                        <label for="star{{ $i }}"><i class="fa-solid fa-star {{$i <= $aftertaste_level ? 'active' : ''}}"></i></label>
+                        <input type="radio" id="aftertaste_star{{ $i }}" name="aftertaste_level" value="{{ $i }}" class="hidden" {{ $i <= $aftertaste_level ? 'checked' : '' }} />
+                        <label for="aftertaste_star{{ $i }}"><i class="fa-solid fa-star {{$i <= $aftertaste_level ? 'active' : ''}}"></i></label>
                     @endfor
                 @else
-                    <input type="radio" id="star1" name="aftertaste_level" value="1" class="hidden"/>
-                    <label for="star1"><i class="fa-solid fa-star"></i></label>
-                    <input type="radio" id="star2" name="aftertaste_level" value="2" class="hidden"/>
-                    <label for="star2"><i class="fa-solid fa-star" class="hidden"></i></label>
-                    <input type="radio" id="star3" name="aftertaste_level" value="3" class="hidden"/>
-                    <label for="star3"><i class="fa-solid fa-star" ></i></label>
-                    <input type="radio" id="star4" name="aftertaste_level" value="4" class="hidden"/>
-                    <label for="star4"><i class="fa-solid fa-star"></i></label>
-                    <input type="radio" id="star5" name="aftertaste_level" value="5" class="hidden"/>
-                    <label for="star5"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="aftertaste_star1" name="aftertaste_level" value="1" class="hidden"/>
+                    <label for="aftertaste_star1"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="aftertaste_star2" name="aftertaste_level" value="2" class="hidden"/>
+                    <label for="aftertaste_star2"><i class="fa-solid fa-star" class="hidden"></i></label>
+                    <input type="radio" id="aftertaste_star3" name="aftertaste_level" value="3" class="hidden"/>
+                    <label for="aftertaste_star3"><i class="fa-solid fa-star" ></i></label>
+                    <input type="radio" id="aftertaste_star4" name="aftertaste_level" value="4" class="hidden"/>
+                    <label for="aftertaste_star4"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="aftertaste_star5" name="aftertaste_level" value="5" class="hidden"/>
+                    <label for="aftertaste_star5"><i class="fa-solid fa-star"></i></label>
                 @endif
             </div>
         </div>
@@ -368,20 +368,20 @@
                     @endphp
 
                     @for($i = 1; $i <= 5; $i++)
-                        <input type="radio" id="star{{ $i }}" name="aftercooled_level" value="{{ $i }}" class="hidden" {{ $i <= $aftercooled_level ? 'checked' : '' }} />
-                        <label for="star{{ $i }}"><i class="fa-solid fa-star {{$i <= $aftercooled_level ? 'active' : ''}}"></i></label>
+                        <input type="radio" id="aftercooled_star{{ $i }}" name="aftercooled_level" value="{{ $i }}" class="hidden" {{ $i <= $aftercooled_level ? 'checked' : '' }} />
+                        <label for="aftercooled_star{{ $i }}"><i class="fa-solid fa-star {{$i <= $aftercooled_level ? 'active' : ''}}"></i></label>
                     @endfor
                 @else
-                    <input type="radio" id="star1" name="aftercooled_level" value="1" class="hidden"/>
-                    <label for="star1"><i class="fa-solid fa-star"></i></label>
-                    <input type="radio" id="star2" name="aftercooled_level" value="2" class="hidden"/>
-                    <label for="star2"><i class="fa-solid fa-star" class="hidden"></i></label>
-                    <input type="radio" id="star3" name="aftercooled_level" value="3" class="hidden"/>
-                    <label for="star3"><i class="fa-solid fa-star" ></i></label>
-                    <input type="radio" id="star4" name="aftercooled_level" value="4" class="hidden"/>
-                    <label for="star4"><i class="fa-solid fa-star"></i></label>
-                    <input type="radio" id="star5" name="aftercooled_level" value="5" class="hidden"/>
-                    <label for="star5"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="aftercooled_star1" name="aftercooled_level" value="1" class="hidden"/>
+                    <label for="aftercooled_star1"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="aftercooled_star2" name="aftercooled_level" value="2" class="hidden"/>
+                    <label for="aftercooled_star2"><i class="fa-solid fa-star" class="hidden"></i></label>
+                    <input type="radio" id="aftercooled_star3" name="aftercooled_level" value="3" class="hidden"/>
+                    <label for="aftercooled_star3"><i class="fa-solid fa-star" ></i></label>
+                    <input type="radio" id="aftercooled_star4" name="aftercooled_level" value="4" class="hidden"/>
+                    <label for="aftercooled_star4"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="aftercooled_star5" name="aftercooled_level" value="5" class="hidden"/>
+                    <label for="aftercooled_star5"><i class="fa-solid fa-star"></i></label>
                 @endif
             </div>
         </div>

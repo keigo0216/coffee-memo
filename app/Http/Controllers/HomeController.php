@@ -53,25 +53,25 @@ class HomeController extends Controller
     public function coffeecreate(Request $request)
     {
         $coffee = new Coffee;
-        $binary_image = new BinaryImage;
 
-
-        // formで送られてきた画像を変数に格納
-        $coffee_img = $request->file('coffee_img');
-        // 画像の名前を取得
-        $img_name = $coffee_img->getClientOriginalName();
-        // アスペクト比を維持したまま、画像のサイズを変更
-        $img = InterventionImage::make($coffee_img)->resize(300, null, function ($constraint) {
-            $constraint->aspectRatio();
-        });
-        // 画像をbase64でエンコードして、coffee_idと共に保存
-        $img_base64=$img->encode('data-url');
         
         $form = $request->all();
         $form['user_id'] = Auth::id();
         unset($form['_token']);
         $coffee->fill($form)->save();
 
+        // formで送られてきた画像を変数に格納
+        $coffee_img = $request->file('coffee_img');
+        if(empty($coffee_img)){
+            return redirect('/');
+        }
+        $binary_image = new BinaryImage;
+        // アスペクト比を維持したまま、画像のサイズを変更
+        $img = InterventionImage::make($coffee_img)->resize(300, null, function ($constraint) {
+            $constraint->aspectRatio();
+        });
+        // 画像をbase64でエンコードして、coffee_idと共に保存
+        $img_base64=$img->encode('data-url');
         $binary_image->fill(['user_id' => Auth::id(), 'coffee_id' => $coffee->id, 'image' => $img_base64])->save();
 
 
@@ -106,26 +106,30 @@ class HomeController extends Controller
     {
         // formで送られてきた情報をcoffeesテーブルとbinary_imagesテーブルに保存
         $coffee = Coffee::find($id);
+
+        $form = $request->all();
+        $form['user_id'] = Auth::id();
+        unset($form['_token']);
+        $coffee->fill($form)->save();
+
+        // formで送られてきた画像を変数に格納
+        $coffee_img = $request->file('coffee_img');
+
+        // $coffee_imgが空の場合は、binary_imagesテーブルに保存しない
+        if(empty($coffee_img)){
+            return redirect('/');
+        }
         $binary_image = BinaryImage::where('coffee_id', $id)->first();
         if (empty($binary_image)) {
             $binary_image = new BinaryImage;
         }
 
-        // formで送られてきた画像を変数に格納
-        $coffee_img = $request->file('coffee_img');
-        // 画像の名前を取得
-        $img_name = $coffee_img->getClientOriginalName();
         // アスペクト比を維持したまま、画像のサイズを変更
         $img = InterventionImage::make($coffee_img)->resize(300, null, function ($constraint) {
             $constraint->aspectRatio();
         });
         // 画像をbase64でエンコードして、coffee_idと共に保存
         $img_base64=$img->encode('data-url');
-
-        $form = $request->all();
-        $form['user_id'] = Auth::id();
-        unset($form['_token']);
-        $coffee->fill($form)->save();
         $binary_image->fill(['user_id' => Auth::id(), 'coffee_id' => $coffee->id, 'image' => $img_base64])->save();
 
         return redirect('/');
