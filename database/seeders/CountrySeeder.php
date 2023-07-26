@@ -97,6 +97,7 @@ class CountrySeeder extends Seeder
 
          // 'id' => 1, 'name' => 'ブラジル'の形で、上記の国リストのクック諸島までの連想配列を作成する
          $params = [
+            ['id' => 0, 'name' => 'その他'],
             ['id' => 1, 'name' => 'ブラジル'],
             ['id' => 2, 'name' => 'ベトナム'],
             ['id' => 3, 'name' => 'インドネシア'],

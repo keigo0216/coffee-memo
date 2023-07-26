@@ -14,3 +14,12 @@
 .stars i.active {
   color: #ff9c1a;
 }
+
+.in-image-rating-box .stars {
+    gap: 7px;
+}
+
+#taste_rating .stars i{
+    font-size: 18px;
+}
+

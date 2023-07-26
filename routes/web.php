@@ -29,9 +29,24 @@ Route::post(
 )->name('coffeeregister');
 
 Route::get(
+    '/coffeedetail/{id}',
+    [App\Http\Controllers\HomeController::class, 'coffeedetail']
+)->name('coffeedetail');
+
+Route::post(
+    '/coffeetrash/{id}',
+    [App\Http\Controllers\HomeController::class, 'coffeetrash']
+)->name('coffeetrash');
+
+Route::get(
     '/coffeeedit/{id}',
     [App\Http\Controllers\HomeController::class, 'coffeeedit']
 )->name('coffeeedit');
+
+Route::post(
+    '/coffeeupdate/{id}',
+    [App\Http\Controllers\HomeController::class, 'coffeeupdate']
+)->name('coffeeupdate');
 
 Auth::routes();
 

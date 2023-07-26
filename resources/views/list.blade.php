@@ -10,7 +10,7 @@
             @foreach ($coffees as $coffee)
             <div class="flex flex-col items-center">
                 <div class="w-full h-32">
-                    <a href="{{ route('coffeeedit', ['id'=>$coffee->id]) }}" class="">
+                    <a href="{{ route('coffeedetail', ['id'=>$coffee->id]) }}" class="">
                         <!-- binary_imageテーブルのimageカラムに格納されている画像がnullではない場合、画像を表示する。 -->
                         @if($coffee->binary_image && $coffee->binary_image->image != null)
                             <img src="{{ $coffee->binary_image->image }}" alt="coffee_image" class="w-full h-full object-contain">
