@@ -50,7 +50,7 @@
                     
                 </div>
             @empty
-                <p>コーヒーが登録されていません。</p>
+                <div>コーヒー未登録</div>
             @endforelse
         </div>
     @endsection
