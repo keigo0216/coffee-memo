@@ -129,14 +129,6 @@
             <div class="w-1/2">
                 <div class="text-yellow-600">ローストレベル</div>
                 <div class="w-28">
-                    <!-- <select name="roast_level">
-                        <option value="1">浅煎り</option>
-                        <option value="2">中浅煎り</option>
-                        <option value="3">中煎り</option>
-                        <option value="4">中深煎り</option>
-                        <option value="5">深煎り</option>
-                        <option value="6">その他</option>
-                    </select> -->
                     <select id="roast_leval" name="roast_lavel" size="3" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option value="1" {{isset($coffee) && $coffee->roast_level == 1 ? 'selected' : ''}}>1</option>
                         <option value="2" {{isset($coffee) && $coffee->roast_level == 2 ? 'selected' : ''}}>2</option>
@@ -154,11 +146,6 @@
             <div class="w-1/2">
                 <div class="text-yellow-600">飲み方</div>
                 <div class="flex flex-col">
-                    <!-- <select name="way_to_drink_id">
-                        <option value="1">ブラック</option>
-                        <option value="2">ミルク</option>
-                        <option value="3">その他</option>
-                    </select> -->
                     <label class="inline-flex items-center">
                         <input type="checkbox" name="way_to_drink_id" value="1" class="mr-2" {{isset($coffee) && $coffee->way_to_drink_id == 1 ? 'checked' : ''}}>
                         ブラック
