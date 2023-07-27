@@ -13,12 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get(
-    '/list',
+    '/',
     [App\Http\Controllers\HomeController::class, 'list']
 )->name('list');
 
@@ -33,10 +29,23 @@ Route::post(
 )->name('coffeeregister');
 
 Route::get(
+    '/coffeedetail/{id}',
+    [App\Http\Controllers\HomeController::class, 'coffeedetail']
+)->name('coffeedetail');
+
+Route::post(
+    '/coffeetrash/{id}',
+    [App\Http\Controllers\HomeController::class, 'coffeetrash']
+)->name('coffeetrash');
+
+Route::get(
     '/coffeeedit/{id}',
     [App\Http\Controllers\HomeController::class, 'coffeeedit']
 )->name('coffeeedit');
 
-Auth::routes();
+Route::post(
+    '/coffeeupdate/{id}',
+    [App\Http\Controllers\HomeController::class, 'coffeeupdate']
+)->name('coffeeupdate');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();

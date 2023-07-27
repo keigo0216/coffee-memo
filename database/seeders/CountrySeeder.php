@@ -123,7 +123,8 @@ class CountrySeeder extends Seeder
             ['id' => 24, 'name' => 'カメルーン'],
             ['id' => 25, 'name' => 'ケニア'],
             ['id' => 26, 'name' => 'エルサルバドル'],
-            ['id' => 27, 'name' => 'タイ']
+            ['id' => 27, 'name' => 'タイ'],
+            ['id' => 28, 'name' => 'その他']
          ];
          DB::table('countries')->insert($params);
     }
