@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class CoffeeSeeder extends Seeder
 {
@@ -34,7 +35,7 @@ class CoffeeSeeder extends Seeder
                 'aftertaste_level' => '5',
                 'aftercooled_level' => '5',
                 'note' => 'コーヒー飲みしか売っていないお店で、コーヒーの味わいに集中することができた。',
-                'date' => '2021/06/10'
+                'date' => Carbon::now()
             ],
             [
                 'id' => '2',
@@ -57,7 +58,7 @@ class CoffeeSeeder extends Seeder
                 'note' => 'ニカラグアのコーヒーは、甘みが強く、酸味が少ないのが特徴。
                 同時に出てきた、あんみつも美味し買った。
                 店内の雰囲気はコーヒーのバーみたいな感じで、落ち着いていて良かった。',
-                'date' => '2021/06/11'
+                'date' => Carbon::now()
             ]
         ];
         DB::table('coffees') -> insert($params);

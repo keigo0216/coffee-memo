@@ -32,7 +32,7 @@ return new class extends Migration
            $table->integer('aftercooled_level')->nullable();
            $table->string('note')->nullable();
            $table->string('img')->nullable();
-           $table->string('date')->nullable();
+           $table->date('date')->nullable();
            $table->string('farm')->nullable();
        });
     }

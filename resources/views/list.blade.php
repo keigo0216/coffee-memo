@@ -43,7 +43,8 @@
                                 </svg>
                             @endfor
                         </div>
-                        <div class="pl-1">{{$coffee->date}}</div>
+                        <!-- string型の$coffee->dateをY/m/dで表示 -->
+                        <div class="pl-1">{{\Illuminate\Support\Str::replace('-', '/', $coffee->date)}}</div>
                     </div>
 
 
